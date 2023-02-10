@@ -1,1 +1,730 @@
 
+DEBUG:root:* Trying 10.1.128.30:443...
+DEBUG:root:* Connected to saengine2.localdomain (10.1.128.30) port 443 (#0)
+DEBUG:root:* found 1 certificates in ./ca.pem
+DEBUG:root:* found 389 certificates in /etc/ssl/certs
+DEBUG:root:* ALPN, offering h2
+DEBUG:root:* ALPN, offering http/1.1
+DEBUG:root:* SSL connection using TLS1.2 / ECDHE_RSA_AES_256_GCM_SHA384
+DEBUG:root:* server certificate verification OK
+DEBUG:root:* server certificate status verification SKIPPED
+DEBUG:root:* common name: saengine2.localdomain (matched)
+DEBUG:root:* server certificate expiration date OK
+DEBUG:root:* server certificate activation date OK
+DEBUG:root:* certificate public key: RSA
+DEBUG:root:* certificate version: #3
+DEBUG:root:* subject: C=US,O=localdomain,CN=saengine2.localdomain
+DEBUG:root:* start date: Thu, 08 Dec 2022 17:13:50 GMT
+DEBUG:root:* expire date: Thu, 11 Jan 2024 17:13:50 GMT
+DEBUG:root:* issuer: C=US,O=localdomain,CN=saengine2.localdomain.27275
+DEBUG:root:* ALPN, server accepted to use http/1.1
+DEBUG:root:< POST /ovirt-engine/sso/oauth/token HTTP/1.1
+DEBUG:root:< Host: saengine2.localdomain
+DEBUG:root:< User-Agent: PythonSDK/4.5.2
+DEBUG:root:< Accept: application/json
+DEBUG:root:< Content-Length: 85
+DEBUG:root:< Content-Type: application/x-www-form-urlencoded
+DEBUG:root:< grant_type=password&scope=ovirt-app-api&username=admin%40internal&password=121212qwQW
+DEBUG:root:* upload completely sent off: 85 out of 85 bytes
+DEBUG:root:* Mark bundle as not supporting multiuse
+DEBUG:root:> HTTP/1.1 200 OK
+DEBUG:root:> Date: Tue, 31 Jan 2023 10:37:44 GMT
+DEBUG:root:> Server: Apache/2.4.37 (centos) OpenSSL/1.1.1k mod_wsgi/4.6.4 Python/3.6
+DEBUG:root:> Set-Cookie: locale=en_US; path=/; secure; HttpOnly; Max-Age=2147483647; Expires=Sun, 18-Feb-2091 13:51:51 GMT
+DEBUG:root:> X-XSS-PROTECTION: 1; MODE=BLOCK
+DEBUG:root:> X-CONTENT-TYPE-OPTIONS: NOSNIFF
+DEBUG:root:> X-FRAME-OPTIONS: SAMEORIGIN
+DEBUG:root:> Content-Type: application/json
+DEBUG:root:> Content-Length: 310
+DEBUG:root:> Vary: Accept-Encoding
+DEBUG:root:> 
+DEBUG:root:> {"access_token":"eqmTw8e1l-QzF_UIyJq0f17K-_gZTMMrD_ArCc5mzw633O2wfZ8ITJfVawK7HpWz_8GM21iCBdamvXGBEQdf_w","scope":"ovirt-app-api ovirt-ext=token-info:authz-search ovirt-ext=token-info:public-authz-search ovirt-ext=token-info:validate ovirt-ext=token:password-access","exp":"1675766264000","token_type":"bearer"}
+DEBUG:root:* Connection #0 to host saengine2.localdomain left intact
+DEBUG:root:* Trying 10.1.128.30:443...
+DEBUG:root:* Connected to saengine2.localdomain (10.1.128.30) port 443 (#0)
+DEBUG:root:* found 1 certificates in ./ca.pem
+DEBUG:root:* found 389 certificates in /etc/ssl/certs
+DEBUG:root:* ALPN, offering h2
+DEBUG:root:* ALPN, offering http/1.1
+DEBUG:root:* SSL connection using TLS1.2 / ECDHE_RSA_AES_256_GCM_SHA384
+DEBUG:root:* server certificate verification OK
+DEBUG:root:* server certificate status verification SKIPPED
+DEBUG:root:* common name: saengine2.localdomain (matched)
+DEBUG:root:* server certificate expiration date OK
+DEBUG:root:* server certificate activation date OK
+DEBUG:root:* certificate public key: RSA
+DEBUG:root:* certificate version: #3
+DEBUG:root:* subject: C=US,O=localdomain,CN=saengine2.localdomain
+DEBUG:root:* start date: Thu, 08 Dec 2022 17:13:50 GMT
+DEBUG:root:* expire date: Thu, 11 Jan 2024 17:13:50 GMT
+DEBUG:root:* issuer: C=US,O=localdomain,CN=saengine2.localdomain.27275
+DEBUG:root:* ALPN, server accepted to use http/1.1
+DEBUG:root:< GET /ovirt-engine/api/hosts?search=status%3Dup HTTP/1.1
+DEBUG:root:< Host: saengine2.localdomain
+DEBUG:root:< User-Agent: PythonSDK/4.5.2
+DEBUG:root:< Version: 4
+DEBUG:root:< Content-Type: application/xml
+DEBUG:root:< Accept: application/xml
+DEBUG:root:< Authorization: Bearer eqmTw8e1l-QzF_UIyJq0f17K-_gZTMMrD_ArCc5mzw633O2wfZ8ITJfVawK7HpWz_8GM21iCBdamvXGBEQdf_w
+DEBUG:root:* Mark bundle as not supporting multiuse
+DEBUG:root:> HTTP/1.1 200 OK
+DEBUG:root:> Date: Tue, 31 Jan 2023 10:37:44 GMT
+DEBUG:root:> Server: Apache/2.4.37 (centos) OpenSSL/1.1.1k mod_wsgi/4.6.4 Python/3.6
+DEBUG:root:> Content-Type: application/xml;charset=UTF-8
+DEBUG:root:> Content-Length: 65
+DEBUG:root:> Correlation-Id: 9058ce77-4051-4807-8a60-37525962e97f
+DEBUG:root:> Vary: Accept-Encoding
+DEBUG:root:> 
+DEBUG:root:> <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+DEBUG:root:> <hosts/>
+DEBUG:root:* Connection #0 to host saengine2.localdomain left intact
+DEBUG:root:* Found bundle for host saengine2.localdomain: 0x1eef610 [serially]
+DEBUG:root:* Re-using existing connection! (#0) with host saengine2.localdomain
+DEBUG:root:* Connected to saengine2.localdomain (10.1.128.30) port 443 (#0)
+DEBUG:root:< GET /ovirt-engine/api/disks HTTP/1.1
+DEBUG:root:< Host: saengine2.localdomain
+DEBUG:root:< User-Agent: PythonSDK/4.5.2
+DEBUG:root:< Version: 4
+DEBUG:root:< Content-Type: application/xml
+DEBUG:root:< Accept: application/xml
+DEBUG:root:< Authorization: Bearer eqmTw8e1l-QzF_UIyJq0f17K-_gZTMMrD_ArCc5mzw633O2wfZ8ITJfVawK7HpWz_8GM21iCBdamvXGBEQdf_w
+DEBUG:root:* Mark bundle as not supporting multiuse
+DEBUG:root:> HTTP/1.1 200 OK
+DEBUG:root:> Date: Tue, 31 Jan 2023 10:37:44 GMT
+DEBUG:root:> Server: Apache/2.4.37 (centos) OpenSSL/1.1.1k mod_wsgi/4.6.4 Python/3.6
+DEBUG:root:> Content-Type: application/xml;charset=UTF-8
+DEBUG:root:> Content-Length: 10880
+DEBUG:root:> Correlation-Id: 86907129-0053-4575-a6b7-f95007a50c73
+DEBUG:root:> Vary: Accept-Encoding
+DEBUG:root:> 
+DEBUG:root:> <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+DEBUG:root:> <disks>
+DEBUG:root:>     <disk href="/ovirt-engine/api/disks/1a0f9434-03c5-442c-a92f-42551abc595d" id="1a0f9434-03c5-442c-a92f-42551abc595d">
+DEBUG:root:>         <actions>
+DEBUG:root:>             <link href="/ovirt-engine/api/disks/1a0f9434-03c5-442c-a92f-42551abc595d/reduce" rel="reduce"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/disks/1a0f9434-03c5-442c-a92f-42551abc595d/copy" rel="copy"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/disks/1a0f9434-03c5-442c-a92f-42551abc595d/export" rel="export"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/disks/1a0f9434-03c5-442c-a92f-42551abc595d/move" rel="move"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/disks/1a0f9434-03c5-442c-a92f-42551abc595d/refreshlun" rel="refreshlun"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/disks/1a0f9434-03c5-442c-a92f-42551abc595d/sparsify" rel="sparsify"/>
+DEBUG:root:>         </actions>
+DEBUG:root:>         <name>OVF_STORE</name>
+DEBUG:root:>         <description>OVF_STORE</description>
+DEBUG:root:>         <link href="/ovirt-engine/api/disks/1a0f9434-03c5-442c-a92f-42551abc595d/disksnapshots" rel="disksnapshots"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/disks/1a0f9434-03c5-442c-a92f-42551abc595d/permissions" rel="permissions"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/disks/1a0f9434-03c5-442c-a92f-42551abc595d/statistics" rel="statistics"/>
+DEBUG:root:>         <actual_size>24576</actual_size>
+DEBUG:root:>         <alias>OVF_STORE</alias>
+DEBUG:root:>         <backup>none</backup>
+DEBUG:root:>         <content_type>ovf_store</content_type>
+DEBUG:root:>         <format>raw</format>
+DEBUG:root:>         <image_id>ba435bc1-25c4-43eb-88a5-2fc9eee5ad4e</image_id>
+DEBUG:root:>         <propagate_errors>false</propagate_errors>
+DEBUG:root:>         <provisioned_size>62976</provisioned_size>
+DEBUG:root:>         <shareable>true</shareable>
+DEBUG:root:>         <sparse>true</sparse>
+DEBUG:root:>         <status>ok</status>
+DEBUG:root:>         <storage_type>image</storage_type>
+DEBUG:root:>         <wipe_after_delete>false</wipe_after_delete>
+DEBUG:root:>         <disk_profile href="/ovirt-engine/api/diskprofiles/e634f8f0-7993-4dc8-825e-89f4a3e6a41e" id="e634f8f0-7993-4dc8-825e-89f4a3e6a41e"/>
+DEBUG:root:>         <storage_domains>
+DEBUG:root:>             <storage_domain href="/ovirt-engine/api/storagedomains/8ad7b016-f29f-49dc-8744-2fd2132ef1cd" id="8ad7b016-f29f-49dc-8744-2fd2132ef1cd"/>
+DEBUG:root:>         </storage_domains>
+DEBUG:root:>     </disk>
+DEBUG:root:>     <disk href="/ovirt-engine/api/disks/9a1301ad-7dce-4ae7-a50e-50f987fbfefa" id="9a1301ad-7dce-4ae7-a50e-50f987fbfefa">
+DEBUG:root:>         <actions>
+DEBUG:root:>             <link href="/ovirt-engine/api/disks/9a1301ad-7dce-4ae7-a50e-50f987fbfefa/reduce" rel="reduce"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/disks/9a1301ad-7dce-4ae7-a50e-50f987fbfefa/copy" rel="copy"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/disks/9a1301ad-7dce-4ae7-a50e-50f987fbfefa/export" rel="export"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/disks/9a1301ad-7dce-4ae7-a50e-50f987fbfefa/move" rel="move"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/disks/9a1301ad-7dce-4ae7-a50e-50f987fbfefa/refreshlun" rel="refreshlun"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/disks/9a1301ad-7dce-4ae7-a50e-50f987fbfefa/sparsify" rel="sparsify"/>
+DEBUG:root:>         </actions>
+DEBUG:root:>         <name>OVF_STORE</name>
+DEBUG:root:>         <description>OVF_STORE</description>
+DEBUG:root:>         <link href="/ovirt-engine/api/disks/9a1301ad-7dce-4ae7-a50e-50f987fbfefa/disksnapshots" rel="disksnapshots"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/disks/9a1301ad-7dce-4ae7-a50e-50f987fbfefa/permissions" rel="permissions"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/disks/9a1301ad-7dce-4ae7-a50e-50f987fbfefa/statistics" rel="statistics"/>
+DEBUG:root:>         <actual_size>24576</actual_size>
+DEBUG:root:>         <alias>OVF_STORE</alias>
+DEBUG:root:>         <backup>none</backup>
+DEBUG:root:>         <content_type>ovf_store</content_type>
+DEBUG:root:>         <format>raw</format>
+DEBUG:root:>         <image_id>6d7ec976-d864-4fe8-8882-3a7473a0d6fe</image_id>
+DEBUG:root:>         <propagate_errors>false</propagate_errors>
+DEBUG:root:>         <provisioned_size>62976</provisioned_size>
+DEBUG:root:>         <shareable>true</shareable>
+DEBUG:root:>         <sparse>true</sparse>
+DEBUG:root:>         <status>ok</status>
+DEBUG:root:>         <storage_type>image</storage_type>
+DEBUG:root:>         <wipe_after_delete>false</wipe_after_delete>
+DEBUG:root:>         <disk_profile href="/ovirt-engine/api/diskprofiles/e634f8f0-7993-4dc8-825e-89f4a3e6a41e" id="e634f8f0-7993-4dc8-825e-89f4a3e6a41e"/>
+DEBUG:root:>         <storage_domains>
+DEBUG:root:>             <storage_domain href="/ovirt-engine/api/storagedomains/8ad7b016-f29f-49dc-8744-2fd2132ef1cd" id="8ad7b016-f29f-49dc-8744-2fd2132ef1cd"/>
+DEBUG:root:>         </storage_domains>
+DEBUG:root:>     </disk>
+DEBUG:root:>     <disk href="/ovirt-engine/api/disks/b76e2eff-7863-459b-8e80-85acd4e79c02" id="b76e2eff-7863-459b-8e80-85acd4e79c02">
+DEBUG:root:>         <actions>
+DEBUG:root:>             <link href="/ovirt-engine/api/disks/b76e2eff-7863-459b-8e80-85acd4e79c02/reduce" rel="reduce"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/disks/b76e2eff-7863-459b-8e80-85acd4e79c02/copy" rel="copy"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/disks/b76e2eff-7863-459b-8e80-85acd4e79c02/export" rel="export"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/disks/b76e2eff-7863-459b-8e80-85acd4e79c02/move" rel="move"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/disks/b76e2eff-7863-459b-8e80-85acd4e79c02/refreshlun" rel="refreshlun"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/disks/b76e2eff-7863-459b-8e80-85acd4e79c02/sparsify" rel="sparsify"/>
+DEBUG:root:>         </actions>
+DEBUG:root:>         <name>testvm_Disk1_testvm-2_testvm-3</name>
+DEBUG:root:>         <description>testvmdisk</description>
+DEBUG:root:>         <link href="/ovirt-engine/api/disks/b76e2eff-7863-459b-8e80-85acd4e79c02/disksnapshots" rel="disksnapshots"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/disks/b76e2eff-7863-459b-8e80-85acd4e79c02/permissions" rel="permissions"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/disks/b76e2eff-7863-459b-8e80-85acd4e79c02/statistics" rel="statistics"/>
+DEBUG:root:>         <actual_size>4096</actual_size>
+DEBUG:root:>         <alias>testvm_Disk1_testvm-2_testvm-3</alias>
+DEBUG:root:>         <backup>none</backup>
+DEBUG:root:>         <content_type>data</content_type>
+DEBUG:root:>         <format>raw</format>
+DEBUG:root:>         <image_id>bf810733-1eac-4635-bf48-dca7ab4b0574</image_id>
+DEBUG:root:>         <propagate_errors>false</propagate_errors>
+DEBUG:root:>         <provisioned_size>10737418240</provisioned_size>
+DEBUG:root:>         <shareable>false</shareable>
+DEBUG:root:>         <sparse>true</sparse>
+DEBUG:root:>         <status>ok</status>
+DEBUG:root:>         <storage_type>image</storage_type>
+DEBUG:root:>         <total_size>4096</total_size>
+DEBUG:root:>         <wipe_after_delete>false</wipe_after_delete>
+DEBUG:root:>         <disk_profile href="/ovirt-engine/api/diskprofiles/e634f8f0-7993-4dc8-825e-89f4a3e6a41e" id="e634f8f0-7993-4dc8-825e-89f4a3e6a41e"/>
+DEBUG:root:>         <storage_domains>
+DEBUG:root:>             <storage_domain href="/ovirt-engine/api/storagedomains/8ad7b016-f29f-49dc-8744-2fd2132ef1cd" id="8ad7b016-f29f-49dc-8744-2fd2132ef1cd"/>
+DEBUG:root:>         </storage_domains>
+DEBUG:root:>     </disk>
+DEBUG:root:>     <disk href="/ovirt-engine/api/disks/f66d1182-84a3-4818-bfc2-0f0b7d2d21eb" id="f66d1182-84a3-4818-bfc2-0f0b7d2d21eb">
+DEBUG:root:>         <actions>
+DEBUG:root:>             <link href="/ovirt-engine/api/disks/f66d1182-84a3-4818-bfc2-0f0b7d2d21eb/reduce" rel="reduce"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/disks/f66d1182-84a3-4818-bfc2-0f0b7d2d21eb/copy" rel="copy"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/disks/f66d1182-84a3-4818-bfc2-0f0b7d2d21eb/export" rel="export"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/disks/f66d1182-84a3-4818-bfc2-0f0b7d2d21eb/move" rel="move"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/disks/f66d1182-84a3-4818-bfc2-0f0b7d2d21eb/refreshlun" rel="refreshlun"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/disks/f66d1182-84a3-4818-bfc2-0f0b7d2d21eb/sparsify" rel="sparsify"/>
+DEBUG:root:>         </actions>
+DEBUG:root:>         <name>testvm_Disk1_testvm-2</name>
+DEBUG:root:>         <description>testvmdisk</description>
+DEBUG:root:>         <link href="/ovirt-engine/api/disks/f66d1182-84a3-4818-bfc2-0f0b7d2d21eb/disksnapshots" rel="disksnapshots"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/disks/f66d1182-84a3-4818-bfc2-0f0b7d2d21eb/permissions" rel="permissions"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/disks/f66d1182-84a3-4818-bfc2-0f0b7d2d21eb/statistics" rel="statistics"/>
+DEBUG:root:>         <actual_size>4096</actual_size>
+DEBUG:root:>         <alias>testvm_Disk1_testvm-2</alias>
+DEBUG:root:>         <backup>none</backup>
+DEBUG:root:>         <content_type>data</content_type>
+DEBUG:root:> <format>raw</format>
+DEBUG:root:>         <image_id>141a380c-2389-47d5-bd4e-1b186c94ead9</image_id>
+DEBUG:root:>         <propagate_errors>false</propagate_errors>
+DEBUG:root:>         <provisioned_size>10737418240</provisioned_size>
+DEBUG:root:>         <shareable>false</shareable>
+DEBUG:root:>         <sparse>true</sparse>
+DEBUG:root:> <status>ok</status>
+DEBUG:root:>         <storage_type>image</storage_type>
+DEBUG:root:>         <total_size>4096</total_size>
+DEBUG:root:>         <wipe_after_delete>false</wipe_after_delete>
+DEBUG:root:>         <disk_profile href="/ovirt-engine/api/diskprofiles/e634f8f0-7993-4dc8-825e-89f4a3e6a41e" id="e634f8f0-7993-4dc8-825e-89f4a3e6a41e"/>
+DEBUG:root:>         <storage_domains>
+DEBUG:root:>             <storage_domain href="/ovirt-engine/api/storagedomains/8ad7b016-f29f-49dc-8744-2fd2132ef1cd" id="8ad7b016-f29f-49dc-8744-2fd2132ef1cd"/>
+DEBUG:root:>         </storage_domains>
+DEBUG:root:>     </disk>
+DEBUG:root:>     <disk href="/ovirt-engine/api/disks/0dcd81a4-4258-4943-a476-0d266d949b69" id="0dcd81a4-4258-4943-a476-0d266d949b69">
+DEBUG:root:>         <actions>
+DEBUG:root:>             <link href="/ovirt-engine/api/disks/0dcd81a4-4258-4943-a476-0d266d949b69/reduce" rel="reduce"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/disks/0dcd81a4-4258-4943-a476-0d266d949b69/copy" rel="copy"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/disks/0dcd81a4-4258-4943-a476-0d266d949b69/export" rel="export"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/disks/0dcd81a4-4258-4943-a476-0d266d949b69/move" rel="move"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/disks/0dcd81a4-4258-4943-a476-0d266d949b69/refreshlun" rel="refreshlun"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/disks/0dcd81a4-4258-4943-a476-0d266d949b69/sparsify" rel="sparsify"/>
+DEBUG:root:>         </actions>
+DEBUG:root:>         <name>testvm_Disk1</name>
+DEBUG:root:>         <description>testvmdisk</description>
+DEBUG:root:>         <link href="/ovirt-engine/api/disks/0dcd81a4-4258-4943-a476-0d266d949b69/disksnapshots" rel="disksnapshots"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/disks/0dcd81a4-4258-4943-a476-0d266d949b69/permissions" rel="permissions"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/disks/0dcd81a4-4258-4943-a476-0d266d949b69/statistics" rel="statistics"/>
+DEBUG:root:>         <actual_size>4096</actual_size>
+DEBUG:root:>         <alias>testvm_Disk1</alias>
+DEBUG:root:>         <backup>none</backup>
+DEBUG:root:>         <content_type>data</content_type>
+DEBUG:root:>         <format>raw</format>
+DEBUG:root:>         <image_id>ac77c685-e9b9-4255-a7da-f66f2872359f</image_id>
+DEBUG:root:>         <propagate_errors>false</propagate_errors>
+DEBUG:root:>         <provisioned_size>10737418240</provisioned_size>
+DEBUG:root:>         <shareable>false</shareable>
+DEBUG:root:>         <sparse>true</sparse>
+DEBUG:root:>         <status>ok</status>
+DEBUG:root:>         <storage_type>image</storage_type>
+DEBUG:root:>         <total_size>4096</total_size>
+DEBUG:root:>         <wipe_after_delete>false</wipe_after_delete>
+DEBUG:root:>         <disk_profile href="/ovirt-engine/api/diskprofiles/e634f8f0-7993-4dc8-825e-89f4a3e6a41e" id="e634f8f0-7993-4dc8-825e-89f4a3e6a41e"/>
+DEBUG:root:>         <storage_domains>
+DEBUG:root:>             <storage_domain href="/ovirt-engine/api/storagedomains/8ad7b016-f29f-49dc-8744-2fd2132ef1cd" id="8ad7b016-f29f-49dc-8744-2fd2132ef1cd"/>
+DEBUG:root:>         </storage_domains>
+DEBUG:root:>     </disk>
+DEBUG:root:> </disks>
+DEBUG:root:* Connection #0 to host saengine2.localdomain left intact
+DEBUG:root:* Found bundle for host saengine2.localdomain: 0x1eef610 [serially]
+DEBUG:root:* Re-using existing connection! (#0) with host saengine2.localdomain
+DEBUG:root:* Connected to saengine2.localdomain (10.1.128.30) port 443 (#0)
+DEBUG:root:< GET /ovirt-engine/api/affinitylabels HTTP/1.1
+DEBUG:root:< Host: saengine2.localdomain
+DEBUG:root:< User-Agent: PythonSDK/4.5.2
+DEBUG:root:< Version: 4
+DEBUG:root:< Content-Type: application/xml
+DEBUG:root:< Accept: application/xml
+DEBUG:root:< Authorization: Bearer eqmTw8e1l-QzF_UIyJq0f17K-_gZTMMrD_ArCc5mzw633O2wfZ8ITJfVawK7HpWz_8GM21iCBdamvXGBEQdf_w
+DEBUG:root:* Mark bundle as not supporting multiuse
+DEBUG:root:> HTTP/1.1 200 OK
+DEBUG:root:> Date: Tue, 31 Jan 2023 10:37:44 GMT
+DEBUG:root:> Server: Apache/2.4.37 (centos) OpenSSL/1.1.1k mod_wsgi/4.6.4 Python/3.6
+DEBUG:root:> Content-Type: application/xml;charset=UTF-8
+DEBUG:root:> Content-Length: 75
+DEBUG:root:> Correlation-Id: 99a3c645-bce7-498b-9c33-5a418d90174f
+DEBUG:root:> Vary: Accept-Encoding
+DEBUG:root:> 
+DEBUG:root:> <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+DEBUG:root:> <affinity_labels/>
+DEBUG:root:* Connection #0 to host saengine2.localdomain left intact
+DEBUG:root:* Found bundle for host saengine2.localdomain: 0x1eef610 [serially]
+DEBUG:root:* Re-using existing connection! (#0) with host saengine2.localdomain
+DEBUG:root:* Connected to saengine2.localdomain (10.1.128.30) port 443 (#0)
+DEBUG:root:< GET /ovirt-engine/api/domains HTTP/1.1
+DEBUG:root:< Host: saengine2.localdomain
+DEBUG:root:< User-Agent: PythonSDK/4.5.2
+DEBUG:root:< Version: 4
+DEBUG:root:< Content-Type: application/xml
+DEBUG:root:< Accept: application/xml
+DEBUG:root:< Authorization: Bearer eqmTw8e1l-QzF_UIyJq0f17K-_gZTMMrD_ArCc5mzw633O2wfZ8ITJfVawK7HpWz_8GM21iCBdamvXGBEQdf_w
+DEBUG:root:* Mark bundle as not supporting multiuse
+DEBUG:root:> HTTP/1.1 200 OK
+DEBUG:root:> Date: Tue, 31 Jan 2023 10:37:44 GMT
+DEBUG:root:> Server: Apache/2.4.37 (centos) OpenSSL/1.1.1k mod_wsgi/4.6.4 Python/3.6
+DEBUG:root:> Content-Type: application/xml;charset=UTF-8
+DEBUG:root:> Content-Length: 668
+DEBUG:root:> Correlation-Id: 32133fd5-fa04-4a1f-b106-11bfc5ef08f6
+DEBUG:root:> Vary: Accept-Encoding
+DEBUG:root:> 
+DEBUG:root:> <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+DEBUG:root:> <domains>
+DEBUG:root:>     <domain href="/ovirt-engine/api/domains/696E7465726E616C2D617574687A" id="696E7465726E616C2D617574687A">
+DEBUG:root:>         <name>internal-authz</name>
+DEBUG:root:>         <link href="/ovirt-engine/api/domains/696E7465726E616C2D617574687A/users" rel="users"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/domains/696E7465726E616C2D617574687A/groups" rel="groups"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/domains/696E7465726E616C2D617574687A/users?search={query}" rel="users/search"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/domains/696E7465726E616C2D617574687A/groups?search={query}" rel="groups/search"/>
+DEBUG:root:>     </domain>
+DEBUG:root:> </domains>
+DEBUG:root:* Connection #0 to host saengine2.localdomain left intact
+DEBUG:root:* Found bundle for host saengine2.localdomain: 0x1eef610 [serially]
+DEBUG:root:* Re-using existing connection! (#0) with host saengine2.localdomain
+DEBUG:root:* Connected to saengine2.localdomain (10.1.128.30) port 443 (#0)
+DEBUG:root:< GET /ovirt-engine/api/vnicprofiles HTTP/1.1
+DEBUG:root:< Host: saengine2.localdomain
+DEBUG:root:< User-Agent: PythonSDK/4.5.2
+DEBUG:root:< Version: 4
+DEBUG:root:< Content-Type: application/xml
+DEBUG:root:< Accept: application/xml
+DEBUG:root:< Authorization: Bearer eqmTw8e1l-QzF_UIyJq0f17K-_gZTMMrD_ArCc5mzw633O2wfZ8ITJfVawK7HpWz_8GM21iCBdamvXGBEQdf_w
+DEBUG:root:* Mark bundle as not supporting multiuse
+DEBUG:root:> HTTP/1.1 200 OK
+DEBUG:root:> Date: Tue, 31 Jan 2023 10:37:45 GMT
+DEBUG:root:> Server: Apache/2.4.37 (centos) OpenSSL/1.1.1k mod_wsgi/4.6.4 Python/3.6
+DEBUG:root:> Content-Type: application/xml;charset=UTF-8
+DEBUG:root:> Content-Length: 802
+DEBUG:root:> Correlation-Id: b24e2edc-dc37-4629-989b-0eb10d44d0ec
+DEBUG:root:> Vary: Accept-Encoding
+DEBUG:root:> 
+DEBUG:root:> <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+DEBUG:root:> <vnic_profiles>
+DEBUG:root:>     <vnic_profile href="/ovirt-engine/api/vnicprofiles/0000000a-000a-000a-000a-000000000398" id="0000000a-000a-000a-000a-000000000398">
+DEBUG:root:>         <name>ovirtmgmt</name>
+DEBUG:root:>         <link href="/ovirt-engine/api/vnicprofiles/0000000a-000a-000a-000a-000000000398/permissions" rel="permissions"/>
+DEBUG:root:>         <pass_through>
+DEBUG:root:>             <mode>disabled</mode>
+DEBUG:root:>         </pass_through>
+DEBUG:root:>         <port_mirroring>false</port_mirroring>
+DEBUG:root:>         <network href="/ovirt-engine/api/networks/00000000-0000-0000-0000-000000000009" id="00000000-0000-0000-0000-000000000009"/>
+DEBUG:root:>         <network_filter href="/ovirt-engine/api/networkfilters/d2370ab4-fee3-11e9-a310-8c1645ce738e" id="d2370ab4-fee3-11e9-a310-8c1645ce738e"/>
+DEBUG:root:>     </vnic_profile>
+DEBUG:root:> </vnic_profiles>
+DEBUG:root:* Connection #0 to host saengine2.localdomain left intact
+DEBUG:root:* Found bundle for host saengine2.localdomain: 0x1eef610 [serially]
+DEBUG:root:* Re-using existing connection! (#0) with host saengine2.localdomain
+DEBUG:root:* Connected to saengine2.localdomain (10.1.128.30) port 443 (#0)
+DEBUG:root:< GET /ovirt-engine/api/networks HTTP/1.1
+DEBUG:root:< Host: saengine2.localdomain
+DEBUG:root:< User-Agent: PythonSDK/4.5.2
+DEBUG:root:< Version: 4
+DEBUG:root:< Content-Type: application/xml
+DEBUG:root:< Accept: application/xml
+DEBUG:root:< Authorization: Bearer eqmTw8e1l-QzF_UIyJq0f17K-_gZTMMrD_ArCc5mzw633O2wfZ8ITJfVawK7HpWz_8GM21iCBdamvXGBEQdf_w
+DEBUG:root:* Mark bundle as not supporting multiuse
+DEBUG:root:> HTTP/1.1 200 OK
+DEBUG:root:> Date: Tue, 31 Jan 2023 10:37:45 GMT
+DEBUG:root:> Server: Apache/2.4.37 (centos) OpenSSL/1.1.1k mod_wsgi/4.6.4 Python/3.6
+DEBUG:root:> Content-Type: application/xml;charset=UTF-8
+DEBUG:root:> Content-Length: 1029
+DEBUG:root:> Correlation-Id: 0e35a2a0-8d38-468a-b4ce-78bc3c6a423e
+DEBUG:root:> Vary: Accept-Encoding
+DEBUG:root:> 
+DEBUG:root:> <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+DEBUG:root:> <networks>
+DEBUG:root:>     <network href="/ovirt-engine/api/networks/00000000-0000-0000-0000-000000000009" id="00000000-0000-0000-0000-000000000009">
+DEBUG:root:>         <name>ovirtmgmt</name>
+DEBUG:root:>         <description>Management Network</description>
+DEBUG:root:>         <comment></comment>
+DEBUG:root:>         <link href="/ovirt-engine/api/networks/00000000-0000-0000-0000-000000000009/permissions" rel="permissions"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/networks/00000000-0000-0000-0000-000000000009/vnicprofiles" rel="vnicprofiles"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/networks/00000000-0000-0000-0000-000000000009/networklabels" rel="networklabels"/>
+DEBUG:root:>         <mtu>0</mtu>
+DEBUG:root:>         <port_isolation>false</port_isolation>
+DEBUG:root:>         <stp>false</stp>
+DEBUG:root:>         <usages>
+DEBUG:root:>             <usage>vm</usage>
+DEBUG:root:>         </usages>
+DEBUG:root:>         <vdsm_name>ovirtmgmt</vdsm_name>
+DEBUG:root:>         <data_center href="/ovirt-engine/api/datacenters/eaaf3ee0-77e4-11ed-8288-000c292d2120" id="eaaf3ee0-77e4-11ed-8288-000c292d2120"/>
+DEBUG:root:>     </network>
+DEBUG:root:> </networks>
+DEBUG:root:* Connection #0 to host saengine2.localdomain left intact
+DEBUG:root:* Found bundle for host saengine2.localdomain: 0x1eef610 [serially]
+DEBUG:root:* Re-using existing connection! (#0) with host saengine2.localdomain
+DEBUG:root:* Connected to saengine2.localdomain (10.1.128.30) port 443 (#0)
+DEBUG:root:< GET /ovirt-engine/api/datacenters/eaaf3ee0-77e4-11ed-8288-000c292d2120 HTTP/1.1
+DEBUG:root:< Host: saengine2.localdomain
+DEBUG:root:< User-Agent: PythonSDK/4.5.2
+DEBUG:root:< Version: 4
+DEBUG:root:< Content-Type: application/xml
+DEBUG:root:< Accept: application/xml
+DEBUG:root:< Authorization: Bearer eqmTw8e1l-QzF_UIyJq0f17K-_gZTMMrD_ArCc5mzw633O2wfZ8ITJfVawK7HpWz_8GM21iCBdamvXGBEQdf_w
+DEBUG:root:* Mark bundle as not supporting multiuse
+DEBUG:root:> HTTP/1.1 200 OK
+DEBUG:root:> Date: Tue, 31 Jan 2023 10:37:45 GMT
+DEBUG:root:> Server: Apache/2.4.37 (centos) OpenSSL/1.1.1k mod_wsgi/4.6.4 Python/3.6
+DEBUG:root:> Content-Type: application/xml;charset=UTF-8
+DEBUG:root:> Content-Length: 1834
+DEBUG:root:> Correlation-Id: 0d5bae79-9442-478e-a7eb-d5b0bcfc3f97
+DEBUG:root:> Vary: Accept-Encoding
+DEBUG:root:> 
+DEBUG:root:> <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+DEBUG:root:> <data_center href="/ovirt-engine/api/datacenters/eaaf3ee0-77e4-11ed-8288-000c292d2120" id="eaaf3ee0-77e4-11ed-8288-000c292d2120">
+DEBUG:root:>     <actions>
+DEBUG:root:>         <link href="/ovirt-engine/api/datacenters/eaaf3ee0-77e4-11ed-8288-000c292d2120/setmaster" rel="setmaster"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/datacenters/eaaf3ee0-77e4-11ed-8288-000c292d2120/cleanfinishedtasks" rel="cleanfinishedtasks"/>
+DEBUG:root:>     </actions>
+DEBUG:root:>     <name>Default</name>
+DEBUG:root:>     <description>The default Data Center</description>
+DEBUG:root:>     <link href="/ovirt-engine/api/datacenters/eaaf3ee0-77e4-11ed-8288-000c292d2120/storagedomains" rel="storagedomains"/>
+DEBUG:root:>     <link href="/ovirt-engine/api/datacenters/eaaf3ee0-77e4-11ed-8288-000c292d2120/permissions" rel="permissions"/>
+DEBUG:root:>     <link href="/ovirt-engine/api/datacenters/eaaf3ee0-77e4-11ed-8288-000c292d2120/networks" rel="networks"/>
+DEBUG:root:>     <link href="/ovirt-engine/api/datacenters/eaaf3ee0-77e4-11ed-8288-000c292d2120/clusters" rel="clusters"/>
+DEBUG:root:>     <link href="/ovirt-engine/api/datacenters/eaaf3ee0-77e4-11ed-8288-000c292d2120/quotas" rel="quotas"/>
+DEBUG:root:>     <link href="/ovirt-engine/api/datacenters/eaaf3ee0-77e4-11ed-8288-000c292d2120/qoss" rel="qoss"/>
+DEBUG:root:>     <link href="/ovirt-engine/api/datacenters/eaaf3ee0-77e4-11ed-8288-000c292d2120/iscsibonds" rel="iscsibonds"/>
+DEBUG:root:>     <local>false</local>
+DEBUG:root:>     <quota_mode>disabled</quota_mode>
+DEBUG:root:>     <status>not_operational</status>
+DEBUG:root:>     <storage_format>v5</storage_format>
+DEBUG:root:>     <supported_versions>
+DEBUG:root:>         <version>
+DEBUG:root:>             <major>4</major>
+DEBUG:root:>             <minor>6</minor>
+DEBUG:root:>         </version>
+DEBUG:root:>     </supported_versions>
+DEBUG:root:>     <version>
+DEBUG:root:>         <major>4</major>
+DEBUG:root:>         <minor>6</minor>
+DEBUG:root:>     </version>
+DEBUG:root:>     <mac_pool href="/ovirt-engine/api/macpools/58ca604b-017d-0374-0220-00000000014e" id="58ca604b-017d-0374-0220-00000000014e"/>
+DEBUG:root:> </data_center>
+DEBUG:root:* Connection #0 to host saengine2.localdomain left intact
+DEBUG:root:* Found bundle for host saengine2.localdomain: 0x1eef610 [serially]
+DEBUG:root:* Re-using existing connection! (#0) with host saengine2.localdomain
+DEBUG:root:* Connected to saengine2.localdomain (10.1.128.30) port 443 (#0)
+DEBUG:root:< GET /ovirt-engine/api/datacenters HTTP/1.1
+DEBUG:root:< Host: saengine2.localdomain
+DEBUG:root:< User-Agent: PythonSDK/4.5.2
+DEBUG:root:< Version: 4
+DEBUG:root:< Content-Type: application/xml
+DEBUG:root:< Accept: application/xml
+DEBUG:root:< Authorization: Bearer eqmTw8e1l-QzF_UIyJq0f17K-_gZTMMrD_ArCc5mzw633O2wfZ8ITJfVawK7HpWz_8GM21iCBdamvXGBEQdf_w
+DEBUG:root:* Mark bundle as not supporting multiuse
+DEBUG:root:> HTTP/1.1 200 OK
+DEBUG:root:> Date: Tue, 31 Jan 2023 10:37:45 GMT
+DEBUG:root:> Server: Apache/2.4.37 (centos) OpenSSL/1.1.1k mod_wsgi/4.6.4 Python/3.6
+DEBUG:root:> Content-Type: application/xml;charset=UTF-8
+DEBUG:root:> Content-Length: 1985
+DEBUG:root:> Correlation-Id: a9162d3c-e3bc-4da5-94be-dacb1265c02d
+DEBUG:root:> Vary: Accept-Encoding
+DEBUG:root:> 
+DEBUG:root:> <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+DEBUG:root:> <data_centers>
+DEBUG:root:>     <data_center href="/ovirt-engine/api/datacenters/eaaf3ee0-77e4-11ed-8288-000c292d2120" id="eaaf3ee0-77e4-11ed-8288-000c292d2120">
+DEBUG:root:>         <actions>
+DEBUG:root:>             <link href="/ovirt-engine/api/datacenters/eaaf3ee0-77e4-11ed-8288-000c292d2120/setmaster" rel="setmaster"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/datacenters/eaaf3ee0-77e4-11ed-8288-000c292d2120/cleanfinishedtasks" rel="cleanfinishedtasks"/>
+DEBUG:root:>         </actions>
+DEBUG:root:>         <name>Default</name>
+DEBUG:root:>         <description>The default Data Center</description>
+DEBUG:root:>         <link href="/ovirt-engine/api/datacenters/eaaf3ee0-77e4-11ed-8288-000c292d2120/storagedomains" rel="storagedomains"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/datacenters/eaaf3ee0-77e4-11ed-8288-000c292d2120/permissions" rel="permissions"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/datacenters/eaaf3ee0-77e4-11ed-8288-000c292d2120/networks" rel="networks"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/datacenters/eaaf3ee0-77e4-11ed-8288-000c292d2120/clusters" rel="clusters"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/datacenters/eaaf3ee0-77e4-11ed-8288-000c292d2120/quotas" rel="quotas"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/datacenters/eaaf3ee0-77e4-11ed-8288-000c292d2120/qoss" rel="qoss"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/datacenters/eaaf3ee0-77e4-11ed-8288-000c292d2120/iscsibonds" rel="iscsibonds"/>
+DEBUG:root:>         <local>false</local>
+DEBUG:root:>         <quota_mode>disabled</quota_mode>
+DEBUG:root:>         <status>not_operational</status>
+DEBUG:root:>         <storage_format>v5</storage_format>
+DEBUG:root:>         <supported_versions>
+DEBUG:root:>             <version>
+DEBUG:root:>                 <major>4</major>
+DEBUG:root:>                 <minor>6</minor>
+DEBUG:root:>             </version>
+DEBUG:root:>         </supported_versions>
+DEBUG:root:>         <version>
+DEBUG:root:>             <major>4</major>
+DEBUG:root:>             <minor>6</minor>
+DEBUG:root:>         </version>
+DEBUG:root:>         <mac_pool href="/ovirt-engine/api/macpools/58ca604b-017d-0374-0220-00000000014e" id="58ca604b-017d-0374-0220-00000000014e"/>
+DEBUG:root:>     </data_center>
+DEBUG:root:> </data_centers>
+DEBUG:root:* Connection #0 to host saengine2.localdomain left intact
+DEBUG:root:* Found bundle for host saengine2.localdomain: 0x1eef610 [serially]
+DEBUG:root:* Re-using existing connection! (#0) with host saengine2.localdomain
+DEBUG:root:* Connected to saengine2.localdomain (10.1.128.30) port 443 (#0)
+DEBUG:root:< GET /ovirt-engine/api/datacenters/eaaf3ee0-77e4-11ed-8288-000c292d2120/storagedomains HTTP/1.1
+DEBUG:root:< Host: saengine2.localdomain
+DEBUG:root:< User-Agent: PythonSDK/4.5.2
+DEBUG:root:< Version: 4
+DEBUG:root:< Content-Type: application/xml
+DEBUG:root:< Accept: application/xml
+DEBUG:root:< Authorization: Bearer eqmTw8e1l-QzF_UIyJq0f17K-_gZTMMrD_ArCc5mzw633O2wfZ8ITJfVawK7HpWz_8GM21iCBdamvXGBEQdf_w
+DEBUG:root:* Mark bundle as not supporting multiuse
+DEBUG:root:> HTTP/1.1 200 OK
+DEBUG:root:> Date: Tue, 31 Jan 2023 10:37:45 GMT
+DEBUG:root:> Server: Apache/2.4.37 (centos) OpenSSL/1.1.1k mod_wsgi/4.6.4 Python/3.6
+DEBUG:root:> Content-Type: application/xml;charset=UTF-8
+DEBUG:root:> Content-Length: 2215
+DEBUG:root:> Correlation-Id: f867eabd-c69a-45ee-b9da-4b8b048ea1e8
+DEBUG:root:> Vary: Accept-Encoding
+DEBUG:root:> 
+DEBUG:root:> <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+DEBUG:root:> <storage_domains>
+DEBUG:root:>     <storage_domain href="/ovirt-engine/api/datacenters/eaaf3ee0-77e4-11ed-8288-000c292d2120/storagedomains/8ad7b016-f29f-49dc-8744-2fd2132ef1cd" id="8ad7b016-f29f-49dc-8744-2fd2132ef1cd">
+DEBUG:root:>         <actions>
+DEBUG:root:>             <link href="/ovirt-engine/api/datacenters/eaaf3ee0-77e4-11ed-8288-000c292d2120/storagedomains/8ad7b016-f29f-49dc-8744-2fd2132ef1cd/activate" rel="activate"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/datacenters/eaaf3ee0-77e4-11ed-8288-000c292d2120/storagedomains/8ad7b016-f29f-49dc-8744-2fd2132ef1cd/deactivate" rel="deactivate"/>
+DEBUG:root:>         </actions>
+DEBUG:root:>         <name>nfs_repl</name>
+DEBUG:root:>         <description></description>
+DEBUG:root:>         <comment></comment>
+DEBUG:root:>         <link href="/ovirt-engine/api/datacenters/eaaf3ee0-77e4-11ed-8288-000c292d2120/storagedomains/8ad7b016-f29f-49dc-8744-2fd2132ef1cd/disks" rel="disks"/>
+DEBUG:root:>         <available>89120571392</available>
+DEBUG:root:>         <backup>false</backup>
+DEBUG:root:>         <block_size>512</block_size>
+DEBUG:root:>         <committed>32212254720</committed>
+DEBUG:root:>         <critical_space_action_blocker>5</critical_space_action_blocker>
+DEBUG:root:>         <discard_after_delete>false</discard_after_delete>
+DEBUG:root:>         <external_status>ok</external_status>
+DEBUG:root:>         <master>true</master>
+DEBUG:root:>         <status>unknown</status>
+DEBUG:root:>         <storage>
+DEBUG:root:>             <address>10.1.128.27</address>
+DEBUG:root:>             <nfs_version>auto</nfs_version>
+DEBUG:root:>             <path>/nfs_dom_replica/data</path>
+DEBUG:root:>             <type>nfs</type>
+DEBUG:root:>         </storage>
+DEBUG:root:>         <storage_format>v5</storage_format>
+DEBUG:root:>         <supports_discard>false</supports_discard>
+DEBUG:root:>         <supports_discard_zeroes_data>false</supports_discard_zeroes_data>
+DEBUG:root:>         <type>data</type>
+DEBUG:root:>         <used>13958643712</used>
+DEBUG:root:>         <warning_low_space_indicator>10</warning_low_space_indicator>
+DEBUG:root:>         <wipe_after_delete>false</wipe_after_delete>
+DEBUG:root:>         <data_center href="/ovirt-engine/api/datacenters/eaaf3ee0-77e4-11ed-8288-000c292d2120" id="eaaf3ee0-77e4-11ed-8288-000c292d2120"/>
+DEBUG:root:>         <data_centers>
+DEBUG:root:>             <data_center href="/ovirt-engine/api/datacenters/eaaf3ee0-77e4-11ed-8288-000c292d2120" id="eaaf3ee0-77e4-11ed-8288-000c292d2120"/>
+DEBUG:root:>         </data_centers>
+DEBUG:root:>     </storage_domain>
+DEBUG:root:> </storage_domains>
+DEBUG:root:* Connection #0 to host saengine2.localdomain left intact
+DEBUG:root:* Found bundle for host saengine2.localdomain: 0x1eef610 [serially]
+DEBUG:root:* Re-using existing connection! (#0) with host saengine2.localdomain
+DEBUG:root:* Connected to saengine2.localdomain (10.1.128.30) port 443 (#0)
+DEBUG:root:< GET /ovirt-engine/api/datacenters/eaaf3ee0-77e4-11ed-8288-000c292d2120/clusters HTTP/1.1
+DEBUG:root:< Host: saengine2.localdomain
+DEBUG:root:< User-Agent: PythonSDK/4.5.2
+DEBUG:root:< Version: 4
+DEBUG:root:< Content-Type: application/xml
+DEBUG:root:< Accept: application/xml
+DEBUG:root:< Authorization: Bearer eqmTw8e1l-QzF_UIyJq0f17K-_gZTMMrD_ArCc5mzw633O2wfZ8ITJfVawK7HpWz_8GM21iCBdamvXGBEQdf_w
+DEBUG:root:* Mark bundle as not supporting multiuse
+DEBUG:root:> HTTP/1.1 200 OK
+DEBUG:root:> Date: Tue, 31 Jan 2023 10:37:45 GMT
+DEBUG:root:> Server: Apache/2.4.37 (centos) OpenSSL/1.1.1k mod_wsgi/4.6.4 Python/3.6
+DEBUG:root:> Content-Type: application/xml;charset=UTF-8
+DEBUG:root:> Content-Length: 5205
+DEBUG:root:> Correlation-Id: fa8b1dd3-3cd5-4e64-9ef5-a177fe0f8d42
+DEBUG:root:> Vary: Accept-Encoding
+DEBUG:root:> 
+DEBUG:root:> <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+DEBUG:root:> <clusters>
+DEBUG:root:>     <cluster href="/ovirt-engine/api/clusters/eab26750-77e4-11ed-beca-000c292d2120" id="eab26750-77e4-11ed-beca-000c292d2120">
+DEBUG:root:>         <actions>
+DEBUG:root:>             <link href="/ovirt-engine/api/clusters/eab26750-77e4-11ed-beca-000c292d2120/upgrade" rel="upgrade"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/clusters/eab26750-77e4-11ed-beca-000c292d2120/resetemulatedmachine" rel="resetemulatedmachine"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/clusters/eab26750-77e4-11ed-beca-000c292d2120/refreshglusterhealstatus" rel="refreshglusterhealstatus"/>
+DEBUG:root:>             <link href="/ovirt-engine/api/clusters/eab26750-77e4-11ed-beca-000c292d2120/syncallnetworks" rel="syncallnetworks"/>
+DEBUG:root:>         </actions>
+DEBUG:root:>         <name>Default</name>
+DEBUG:root:>         <description>The default server cluster</description>
+DEBUG:root:>         <comment></comment>
+DEBUG:root:>         <link href="/ovirt-engine/api/clusters/eab26750-77e4-11ed-beca-000c292d2120/permissions" rel="permissions"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/clusters/eab26750-77e4-11ed-beca-000c292d2120/networkfilters" rel="networkfilters"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/clusters/eab26750-77e4-11ed-beca-000c292d2120/networks" rel="networks"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/clusters/eab26750-77e4-11ed-beca-000c292d2120/cpuprofiles" rel="cpuprofiles"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/clusters/eab26750-77e4-11ed-beca-000c292d2120/affinitygroups" rel="affinitygroups"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/clusters/eab26750-77e4-11ed-beca-000c292d2120/glusterhooks" rel="glusterhooks"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/clusters/eab26750-77e4-11ed-beca-000c292d2120/glustervolumes" rel="glustervolumes"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/clusters/eab26750-77e4-11ed-beca-000c292d2120/enabledfeatures" rel="enabledfeatures"/>
+DEBUG:root:>         <link href="/ovirt-engine/api/clusters/eab26750-77e4-11ed-beca-000c292d2120/externalnetworkproviders" rel="externalnetworkproviders"/>
+DEBUG:root:>         <ballooning_enabled>true</ballooning_enabled>
+DEBUG:root:>         <bios_type>q35_sea_bios</bios_type>
+DEBUG:root:>         <cpu>
+DEBUG:root:>             <architecture>x86_64</architecture>
+DEBUG:root:>             <type>Intel SandyBridge Family</type>
+DEBUG:root:>         </cpu>
+DEBUG:root:>         <custom_scheduling_policy_properties>
+DEBUG:root:>             <property>
+DEBUG:root:>                 <name>HighUtilization</name>
+DEBUG:root:>                 <value>80</value>
+DEBUG:root:>             </property>
+DEBUG:root:>             <property>
+DEBUG:root:>                 <name>CpuOverCommitDurationMinutes</name>
+DEBUG:root:>                 <value>2</value>
+DEBUG:root:>             </property>
+DEBUG:root:>         </custom_scheduling_policy_properties>
+DEBUG:root:>         <error_handling>
+DEBUG:root:>             <on_error>migrate</on_error>
+DEBUG:root:>         </error_handling>
+DEBUG:root:>         <fencing_policy>
+DEBUG:root:>             <enabled>true</enabled>
+DEBUG:root:>             <skip_if_connectivity_broken>
+DEBUG:root:>                 <enabled>false</enabled>
+DEBUG:root:>                 <threshold>50</threshold>
+DEBUG:root:>             </skip_if_connectivity_broken>
+DEBUG:root:>             <skip_if_gluster_bricks_up>false</skip_if_gluster_bricks_up>
+DEBUG:root:>             <skip_if_gluster_quorum_not_met>false</skip_if_gluster_quorum_not_met>
+DEBUG:root:>             <skip_if_sd_active>
+DEBUG:root:>                 <enabled>false</enabled>
+DEBUG:root:>             </skip_if_sd_active>
+DEBUG:root:>         </fencing_policy>
+DEBUG:root:>         <fips_mode>disabled</fips_mode>
+DEBUG:root:>         <firewall_type>firewalld</firewall_type>
+DEBUG:root:>         <gluster_service>false</gluster_service>
+DEBUG:root:>         <ha_reservation>false</ha_reservation>
+DEBUG:root:>         <ksm>
+DEBUG:root:>             <enabled>true</enabled>
+DEBUG:root:>             <merge_across_nodes>true</merge_across_nodes>
+DEBUG:root:>         </ksm>
+DEBUG:root:>         <log_max_memory_used_threshold>95</log_max_memory_used_threshold>
+DEBUG:root:>         <log_max_memory_used_threshold_type>percentage</log_max_memory_used_threshold_type>
+DEBUG:root:>         <memory_policy>
+DEBUG:root:>             <over_commit>
+DEBUG:root:>                 <percent>100</percent>
+DEBUG:root:>             </over_commit>
+DEBUG:root:>             <transparent_hugepages>
+DEBUG:root:>                 <enabled>true</enabled>
+DEBUG:root:>             </transparent_hugepages>
+DEBUG:root:>         </memory_policy>
+DEBUG:root:>         <migration>
+DEBUG:root:>             <auto_converge>inherit</auto_converge>
+DEBUG:root:>             <bandwidth>
+DEBUG:root:>                 <assignment_method>auto</assignment_method>
+DEBUG:root:>             </bandwidth>
+DEBUG:root:>             <compressed>inherit</compressed>
+DEBUG:root:>             <encrypted>inherit</encrypted>
+DEBUG:root:>             <policy id="80554327-0569-496b-bdeb-fcbbf52b827b"/>
+DEBUG:root:>         </migration>
+DEBUG:root:>         <required_rng_sources>
+DEBUG:root:>             <required_rng_source>urandom</required_rng_source>
+DEBUG:root:>         </required_rng_sources>
+DEBUG:root:>         <switch_type>legacy</switch_type>
+DEBUG:root:>         <threads_as_cores>false</threads_as_cores>
+DEBUG:root:>         <trusted_service>false</trusted_service>
+DEBUG:root:>         <tunnel_migration>false</tunnel_migration>
+DEBUG:root:>         <version>
+DEBUG:root:>             <major>4</major>
+DEBUG:root:>             <minor>6</minor>
+DEBUG:root:>         </version>
+DEBUG:root:>         <virt_service>true</virt_service>
+DEBUG:root:>         <vnc_encryption>false</vnc_encryption>
+DEBUG:root:>         <data_center href="/ovirt-engine/api/datacenters/eaaf3ee0-77e4-11ed-8288-000c292d2120" id="eaaf3ee0-77e4-11ed-8288-000c292d2120"/>
+DEBUG:root:>         <mac_pool href="/ovirt-engine/api/macpools/58ca604b-017d-0374-0220-00000000014e" id="58ca604b-017d-0374-0220-00000000014e"/>
+DEBUG:root:>         <scheduling_policy href="/ovirt-engine/api/schedulingpolicies/b4ed2332-a7ac-4d5f-9596-99a439cb2812" id="b4ed2332-a7ac-4d5f-9596-99a439cb2812"/>
+DEBUG:root:>     </cluster>
+DEBUG:root:> </clusters>
+DEBUG:root:* Connection #0 to host saengine2.localdomain left intact
+DEBUG:root:* Found bundle for host saengine2.localdomain: 0x1eef610 [serially]
+DEBUG:root:* Re-using existing connection! (#0) with host saengine2.localdomain
+DEBUG:root:* Connected to saengine2.localdomain (10.1.128.30) port 443 (#0)
+DEBUG:root:< GET /ovirt-engine/api/datacenters/eaaf3ee0-77e4-11ed-8288-000c292d2120/clusters/eab26750-77e4-11ed-beca-000c292d2120/affinitygroups HTTP/1.1
+DEBUG:root:< Host: saengine2.localdomain
+DEBUG:root:< User-Agent: PythonSDK/4.5.2
+DEBUG:root:< Version: 4
+DEBUG:root:< Content-Type: application/xml
+DEBUG:root:< Accept: application/xml
+DEBUG:root:< Authorization: Bearer eqmTw8e1l-QzF_UIyJq0f17K-_gZTMMrD_ArCc5mzw633O2wfZ8ITJfVawK7HpWz_8GM21iCBdamvXGBEQdf_w
+DEBUG:root:* Mark bundle as not supporting multiuse
+DEBUG:root:> HTTP/1.1 200 OK
+DEBUG:root:> Date: Tue, 31 Jan 2023 10:37:45 GMT
+DEBUG:root:> Server: Apache/2.4.37 (centos) OpenSSL/1.1.1k mod_wsgi/4.6.4 Python/3.6
+DEBUG:root:> Content-Type: application/xml;charset=UTF-8
+DEBUG:root:> Content-Length: 75
+DEBUG:root:> Correlation-Id: 95939e14-d782-4c76-8e16-49a375bd4658
+DEBUG:root:> Vary: Accept-Encoding
+DEBUG:root:> 
+DEBUG:root:> <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+DEBUG:root:> <affinity_groups/>
+DEBUG:root:* Connection #0 to host saengine2.localdomain left intact
+DEBUG:root:* Trying 10.1.128.30:443...
+DEBUG:root:* Connected to saengine2.localdomain (10.1.128.30) port 443 (#0)
+DEBUG:root:* found 1 certificates in ./ca.pem
+DEBUG:root:* found 389 certificates in /etc/ssl/certs
+DEBUG:root:* ALPN, offering h2
+DEBUG:root:* ALPN, offering http/1.1
+DEBUG:root:* SSL connection using TLS1.2 / ECDHE_RSA_AES_256_GCM_SHA384
+DEBUG:root:* server certificate verification OK
+DEBUG:root:* server certificate status verification SKIPPED
+DEBUG:root:* common name: saengine2.localdomain (matched)
+DEBUG:root:* server certificate expiration date OK
+DEBUG:root:* server certificate activation date OK
+DEBUG:root:* certificate public key: RSA
+DEBUG:root:* certificate version: #3
+DEBUG:root:* subject: C=US,O=localdomain,CN=saengine2.localdomain
+DEBUG:root:* start date: Thu, 08 Dec 2022 17:13:50 GMT
+DEBUG:root:* expire date: Thu, 11 Jan 2024 17:13:50 GMT
+DEBUG:root:* issuer: C=US,O=localdomain,CN=saengine2.localdomain.27275
+DEBUG:root:* ALPN, server accepted to use http/1.1
+DEBUG:root:< POST /ovirt-engine/services/sso-logout HTTP/1.1
+DEBUG:root:< Host: saengine2.localdomain
+DEBUG:root:< User-Agent: PythonSDK/4.5.2
+DEBUG:root:< Accept: application/json
+DEBUG:root:< Content-Length: 112
+DEBUG:root:< Content-Type: application/x-www-form-urlencoded
+DEBUG:root:< scope=ovirt-app-api&token=eqmTw8e1l-QzF_UIyJq0f17K-_gZTMMrD_ArCc5mzw633O2wfZ8ITJfVawK7HpWz_8GM21iCBdamvXGBEQdf_w
+DEBUG:root:* upload completely sent off: 112 out of 112 bytes
+DEBUG:root:* Mark bundle as not supporting multiuse
+DEBUG:root:> HTTP/1.1 200 OK
+DEBUG:root:> Date: Tue, 31 Jan 2023 10:37:45 GMT
+DEBUG:root:> Server: Apache/2.4.37 (centos) OpenSSL/1.1.1k mod_wsgi/4.6.4 Python/3.6
+DEBUG:root:> Set-Cookie: locale=en_US; path=/; secure; HttpOnly; Max-Age=2147483647; Expires=Sun, 18-Feb-2091 13:51:52 GMT
+DEBUG:root:> Content-Type: application/json
+DEBUG:root:> Content-Length: 3
+DEBUG:root:> Vary: Accept-Encoding
+DEBUG:root:> 
+DEBUG:root:> { }
+DEBUG:root:* Connection #0 to host saengine2.localdomain left intact
